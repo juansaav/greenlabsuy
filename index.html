@@ -11,7 +11,7 @@
 		<!-- Page Title -->
         <title>Green Labs Uy</title>		
 		<!-- Meta Description -->
-        <meta name="description" content="Blue One Page Creative HTML5 Template">
+        <meta name="description" content="Green Labs Uy - Software solutions">
         <meta name="keywords" content="one page, single page, onepage, responsive, parallax, creative, business, html5, css3, css3 animation">
         <meta name="author" content="Muhammad Morshed">
 		<!-- Mobile Specific Meta -->
@@ -65,7 +65,7 @@
 					<!-- logo -->
                     <a class="navbar-brand" href="#body">
 						<h1 id="logo">
-							<img src="img/logo.png" alt="Brandi">
+							<!--img src="img/logo.png" alt="Brandi"-->
 						</h1>
 					</a>
 					<!-- /logo -->
@@ -130,7 +130,7 @@
 						<div class="carousel-caption">
 							<h2 data-wow-duration="700ms" data-wow-delay="500ms" class="wow bounceInDown animated">Meet<span> Green Labs Uy</span>!</h2>
 							<h3 data-wow-duration="1000ms" class="wow slideInLeft animated"><span class="color">creative</span> software solutions</h3>
-							<p data-wow-duration="1000ms" class="wow slideInRight animated">We are a team of professionals</p>
+							<p data-wow-duration="1000ms" class="wow slideInRight animated">We are a team of professionals, we'd love to hear about your project, feel free to reach out to us.</p>
 							
 							<!--ul class="social-links text-center">
 								<li><a href=""><i class="fa fa-twitter fa-lg"></i></a></li>
@@ -171,8 +171,8 @@
 							</div>
 							
 							<div class="service-desc">
-								<h3>Web solutions</h3>
-								<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
+								<h3>Web & Desktop solutions</h3>
+								<p>Creating desktop apps and websites from scratch is a very enjoyable task for us to take on! We can take care of your project from start to finish, including the graphic design. We can also develop your CMS (Content Management System), which will give you independence to change your website content at any time. </p>
 							</div>
 						</div>
 					</div>
@@ -184,25 +184,10 @@
 							
 							<div class="service-desc">
 								<h3>Mobile solutions</h3>
-								<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
+								<p> We have the experience and Know How necessary to develop your projects and bring your business to the Mobile world. We develop custom mobile applications, focusing on Android & iOS platforms.</p>
 							</div>
 						</div>
 					</div>
-					<div class="col-md-4 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="500ms">
-						<div class="service-item">
-							<div class="service-icon">
-								<i class="fa fa-cloud fa-2x"></i>
-							</div>
-							
-							<div class="service-desc">
-								<h3>Cloud based solutions</h3>
-								<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
-							</div>
-						</div>
-					</div>
-					
-				</div>
-				<div class="row">
 					<div class="col-md-4 wow fadeInRight" data-wow-duration="500ms"  data-wow-delay="900ms">
 						<div class="service-item">
 							<div class="service-icon">
@@ -211,10 +196,15 @@
 							
 							<div class="service-desc">
 								<h3>Product Discovery</h3>
-								<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
+								<p> 
+								Our goal is to help product owners make the most of the resources they invest in their products. We save them time and money by enabling them to identify and test a Minimum Viable Product long before a single line of code is written.</p>
 							</div>
 						</div>
 					</div>
+					
+				</div>
+				<div class="row">
+					
 				</div>
 			</div>
 		</section>
@@ -233,7 +223,7 @@
 				<div class="row">
 				
 					<div class="sec-title text-center">
-						<h2>Works</h2>
+						<h2>Our Works</h2>
 						<div class="devider"><i class="fa fa-lg"></i></div>
 					</div>
 					
@@ -254,9 +244,8 @@
 				</div>
 			</div>
 			
-			<div class="project-wrapper">
-			
-				<figure class="mix work-item desktop">
+			<div class="project-wrapper">			
+				<figure class="mix work-item desktop" style="padding: 5">
 					<img src="img/works/work-00.jpg" alt="">
 					<figcaption class="overlay">
 						<a href="https://heliosbyips.com/" class="fancybox" rel="works" title="www.heliosbyips.com/" href="img/works/work-00.jpg"><i class="fa fa-eye fa-lg"></i></a>
@@ -534,11 +523,34 @@
 									<textarea name="message" id="message" placeholder="Message" class="form-control"></textarea>
 								</div>
 								<div class="input-group">
-									<input type="submit" id="form-submit" class="pull-right" value="Send message">
+									<input onclick="sendEmail()" id="form-submit" class="pull-right" value="Send message">
 								</div>
 							</form>
 						</div>
 					</div>
+
+<script>
+function myFunction() {
+       	           Email.send($scope.emailEmail,
+	                "juansaav_@hotmail.com",
+	                "Consulta pagina - Nombre: " 
+	                + document.getElementById("name") 
+	                + " Email: "document.getElementById("email"),
+	                document.getElementById("message"),
+	                "smtp.elasticemail.com",
+	                "matiasolaldeolmos@gmail.com",
+	                "eb4e4d75-e39b-4cd0-a8da-0eedadf3fa4e");
+			       $scope.nameEmail = "";
+			       $scope.phoneEmail = "";
+			       $scope.messageEmail = "";
+			       $scope.emailEmail = "";
+			       $scope.emailSent = true;
+			       setTimeout(function(){ 
+				    document.body.scrollTop = 0;
+				    document.documentElement.scrollTop = 0;
+			       	location.reload();
+			       }, 3000); };
+</script>
 					<!-- end contact form -->
 					<!-- contact address -->
 					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 wow fadeInLeft animated" data-wow-duration="500ms">
@@ -562,10 +574,6 @@
 					
 				</div>
 			</div>
-			
-			<!-- Google map -->
-			<!--div id="map_canvas" class="wow bounceInDown animated" data-wow-duration="500ms"></div-->
-			<!-- End Google map -->
 			
 		</section>
 		
@@ -654,8 +662,6 @@
 		<!-- Contact form validation -->
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.32/jquery.form.js"></script>
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.11.1/jquery.validate.min.js"></script>
-		<!-- Google Map -->
-        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU&libraries=places"></script>
 		<!-- jquery easing -->
         <script src="js/jquery.easing.min.js"></script>
 		<!-- jquery easing -->
